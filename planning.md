@@ -131,7 +131,7 @@ After running evaluation, I will paste my list of misclassified examples into Cl
     Base model: distilbert-base-uncased (HuggingFace)
     Platform: Google Colab (T4 GPU)
     Libraries: transformers, datasets, scikit-learn
-    Epochs: 3 (default), learning rate: 2e-5, batch size: 16
+    Epochs: 5, learning rate: 5e-5, batch size: 16
 
         │
         ▼
@@ -158,6 +158,6 @@ Document at least 3 examples that were genuinely difficult to label:
 
 | # | Post text (excerpt) | Labels considered | Decision | Reasoning |
 |---|---|---|---|---|
-| 1 | (fill in during annotation) | | | |
-| 2 | (fill in during annotation) | | | |
-| 3 | (fill in during annotation) | | | |
+| 1 |"Messi is clearly the GOAT — he has 8 Ballon d'Ors."  |  hot_take / analysis|hot_take  |The stat is cherry-picked to support a conclusion rather than building an argument. One decorative stat does not make a comment analysis. |
+| 2 |"He's the Gretzky of football" | hot_take / reaction|hot_take |  Makes a bold comparative claim about a player's status. Even though it's short, it's asserting something substantive, not just expressing emotion.|
+| 3 |"People talk about Ferran Torres missing sitters, but his first touch has to be among the worst I've seen from a forward at this level." |hot_take / analysis |analysis |Specific observation with enough detail to verify — leans analysis even without explicit stats.|
